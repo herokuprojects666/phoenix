@@ -1,7 +1,7 @@
-defmodule Kochava.Kochava_Accounts.Account do
+defmodule Kochava.KochavaAccounts.Account do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Kochava.Kochava_Accounts.Account
+  alias Kochava.KochavaAccounts.Account
 
 
   schema "accounts" do
