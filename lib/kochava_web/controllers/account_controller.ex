@@ -5,8 +5,9 @@ defmodule KochavaWeb.AccountController do
   alias Kochava.Accounts.Account
 
   def index(conn, _params) do
-    accounts = Accounts.list_accounts()
-    render(conn, "index.html", accounts: accounts)
+    accounts = Accounts.list_accounts() 
+      |> Enum.map(fn x -> Map.take(x, [:name, :id]) end)
+    json(conn, %{ "data": accounts })
   end
 
   def new(conn, _params) do

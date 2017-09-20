@@ -38,6 +38,8 @@ defmodule KochavaWeb.Endpoint do
     key: "_kochava_key",
     signing_salt: "33K8qge7"
 
+  plug CORSPlug
+
   plug KochavaWeb.Router
 
   @doc """
