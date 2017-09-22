@@ -2,7 +2,7 @@ defmodule KochavaWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", KochavaWeb.RoomChannel
+  channel "room:*", KochavaWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
